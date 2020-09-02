@@ -1,0 +1,13 @@
+{% extends "employee_app/layout.html" %}
+
+{% block body %}
+    <h1>Branches Details</h1>
+    <ol>
+        {% for br in brn %}
+        <li>
+            <a href="{% url 'departments'  br.id %}" > {{br}}  </a>
+        </li>
+        {% endfor %}
+    </ol>
+
+{% endblock %}

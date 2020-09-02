@@ -1,0 +1,13 @@
+{% extends "employee_app/layout.html" %}
+{% block body %}
+    <h1>Departments Details</h1>
+    <ol>
+        {% for dpts in depts %}
+        <li>
+            <a href="{% url 'employees' dpts.id %}">{{dpts}}</a>
+        </li>
+        {% empty %}
+            <h1>NO DEPARTMENTS</h1>
+        {% endfor %}
+    </ol>
+{% endblock %}

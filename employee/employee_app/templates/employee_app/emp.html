@@ -1,0 +1,17 @@
+{% extends "employee_app/layout.html" %}
+{% block body %}
+    <h1>Employee Details</h1>
+    <ol>
+        {% for empls in emps %}
+        <li>
+            {{empls}}
+        </li>
+        {% empty %}
+            <h1>NO EMPLOYEES</h1>
+        {% endfor %}
+    </ol>
+    <h1>
+        <a href="{% url 'index' %}">BACK TO HOME PAGE</a>
+    </h1>
+
+{% endblock %}
